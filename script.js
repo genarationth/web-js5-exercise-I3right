@@ -49,14 +49,18 @@ console.log('\n');
 
 
 // 2 Print all the odd numbers between 1 - 100.
-const printUntilEnd = (numStart, numEnd) => {
-    let value = numStart;
-    while(value<=numEnd){
-        console.log(value);
-        value ++
+const printOddNum = (numStart, numEnd) => {
+    let count = numStart;
+    let result = [];
+    while(count<=numEnd){
+        if(count%2 === 1){
+            result.push(count)
+        }
+        count ++
     }
+    console.log(result.join());
 }
-printUntilEnd(1,100)                             // result num from 1 2 3 ... 100
+printOddNum(1,100)                             // result Odd num from 1 2 3 ... 100
 
 
 console.log('\n');
